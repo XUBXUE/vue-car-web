@@ -44,14 +44,10 @@ export default {
   background-color: #FFF;
   @include webkit(box-shadow, 0 0 18px 0 rgba(0, 0, 0, .2));
   @include webkit(box-sizing, border-box);
-  header {
-    display: flex;
-    h4, p {
-      flex: 1;
-    }
-  }
+  header { @extend %clearfix }
 }
 .car-logo {
+  float: left;
   img {
     display: inline;
     height: 34px;
@@ -61,7 +57,7 @@ export default {
   .name { font-size: 16px; }
 }
 .car-attr {
-  text-align: right;
+  float: right;
   line-height: 34px;
   opacity: .5;
 }
