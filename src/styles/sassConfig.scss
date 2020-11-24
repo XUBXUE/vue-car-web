@@ -13,10 +13,20 @@ $main-color: #34393F;
   *height: 1%;
 }
 
+/* 用于属性名 */
 @mixin webkit($type, $value) {
   -webkit-#{$type}: $value;
   -moz-#{$type}: $value;
   -ms-#{$type}: $value;
   -o-#{$type}: $value;
+  #{$type}: $value;
+}
+
+/* 用于属性值 */
+@mixin webkitA($type, $value) { //A -> after 
+  #{$type}: -webkit-#{$value};
+  #{$type}: -moz-#{$value};
+  #{$type}: -ms-#{$value};
+  #{$type}: -o-#{$value};
   #{$type}: $value;
 }
